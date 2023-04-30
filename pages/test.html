@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="shortcut icon" href="../images/icon.ico" type="image/x-icon">
+ <title>Тест</title>
+  <script src="../js/script.js"></script>
+ <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="header">
+ <div class="header__logo">
+	<img src="../images/emblem.png" alt="School logo">
+	<h2 class="header__title">Лицей №121</h2>
+	</div>
+	<div class="burger__menu">
+            <input id="menu__toggle" type="checkbox">
+            <label class="menu__bottom" for="menu__toggle">
+                <span></span>
+            </label>
+ <nav class="menu">
+  <ul class="menu__list">
+   <li class="menu__item"><a href="../index.html" class="menu__link">Главная</a></li>
+   <li class="menu__item"><a href="classroom.html" class="menu__link">Классная комната</a></li>
+   <li class="menu__item"><a href="favoritelesson.html" class="menu__link">Любимый предмет</a></li>
+   <li class="menu__item"><a href="aboutme.html" class="menu__link">О себе</a></li>
+   <li class="menu__item"><a href="test.html" class="menu__link">Тест</a></li>
+  </ul>
+ </nav>
+ </div>
+ <nav class="menu__fullscreen">
+  <ul class="menu__list">
+   <li class="menu__item"><a href="../index.html" class="menu__link">Главная</a></li>
+   <li class="menu__item"><a href="classroom.html" class="menu__link">Классная комната</a></li>
+   <li class="menu__item"><a href="favoritelesson.html" class="menu__link">Любимый предмет</a></li>
+   <li class="menu__item"><a href="aboutme.html" class="menu__link">О себе</a></li>
+   <li class="menu__item"><a href="test.html" class="menu__link">Тест</a></li>
+ </ul>
+ </nav>
+</header>
+
+<center><main class="main">
+ <div class="main__item">
+  <h2 class="main__title">Тест</h2>
+  <div class="test">
+ 
+  <form name="test">
+  <p>1. В каком году состоялось открытие школы?</p>
+  <input type="radio" name="q1" value="a"> 1989<br>
+  <input type="radio" name="q1" value="b"> 1985<br>
+  <input type="radio" name="q1" value="c"> 1999<br>
+  <input type="radio" name="q1" value="d"> 1995<br><br>
+
+  <p>2. Какой мой любимый предмет?</p>
+  <input type="radio" name="q2" value="a"> Физика<br>
+  <input type="radio" name="q2" value="b"> Информатика<br>
+  <input type="radio" name="q2" value="c"> Алгебра<br>
+  <input type="radio" name="q2" value="d"> Русский язык<br><br>
+
+  <p>3. В каком году я стал выпускником?</p>
+  <input type="radio" name="q3" value="a"> 2021<br>
+  <input type="radio" name="q3" value="b"> 2019<br>
+  <input type="radio" name="q3" value="c"> 2022<br>
+  <input type="radio" name="q3" value="d"> 2020<br><br>
+
+  <p>4. Как меня зовут?</p>
+  <input type="radio" name="q4" value="a"> Кирилл Колодинов<br>
+  <input type="radio" name="q4" value="b"> Артемий Куцев<br>
+  <input type="radio" name="q4" value="c"> Илья Карпов<br>
+  <input type="radio" name="q4" value="d"> Никита Миронов<br><br>
+
+  <p>5. Какой предмет преподают углубленно?</p>
+  <input type="radio" name="q5" value="a"> Математика<br>
+  <input type="radio" name="q5" value="b"> Физика<br>
+  <input type="radio" name="q5" value="c"> Химия<br>
+  <input type="radio" name="q5" value="d"> Русский язык<br><br>
+ <button type="button" onclick="checkAnswers()">Проверить ответы</button>
+ </form>
+	 <p id="result"></p>	
+ </div>
+ </div>
+</main>
+</center>
+<center><footer class="footer">
+</footer>
+</center>
+</body>
+</html>
