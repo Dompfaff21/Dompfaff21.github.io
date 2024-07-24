@@ -54,7 +54,6 @@ function init() {
         {
             coords: [55.757902, 37.631241],
         }
-
     ];
 
     var createBalloonLayout = function (content) {
@@ -72,6 +71,8 @@ function init() {
         `);
     };
 
+    var currentPlacemark = null;
+
     markersData.forEach(function(marker) {
         var BalloonContentLayout = createBalloonLayout(marker);
 
@@ -81,24 +82,29 @@ function init() {
             iconImageSize: [20, 20],
             iconImageOffset: [-10, -10],
             balloonContentLayout: BalloonContentLayout,
-            hideIconOnBalloonOpen: false, 
+            hideIconOnBalloonOpen: false,
             balloonPanelMaxMapArea: 0,
             balloonOffset: [-100, 0]
         });
 
-         placemark.isClicked = false;
+        placemark.events.add('click', function (e) {
+            if (currentPlacemark && currentPlacemark !== placemark) {
+                currentPlacemark.options.set('iconImageHref', './pics/marker.svg');
+                currentPlacemark.balloon.close();
+                currentPlacemark.isClicked = false; // Reset the previous placemark's click state
+            }
 
-         placemark.events.add('click', function (e) {
-             if (placemark.isClicked) {
-                 placemark.options.set('iconImageHref', './pics/marker.svg');
-                 placemark.balloon.open();
-             } else {
-                 placemark.options.set('iconImageHref', './pics/marker_onclick.svg');
-                 placemark.balloon.close();
-             }
-             placemark.isClicked = !placemark.isClicked;
-         });
+            if (placemark.isClicked) {
+                placemark.options.set('iconImageHref', './pics/marker.svg');
+                placemark.balloon.close();
+            } else {
+                placemark.options.set('iconImageHref', './pics/marker_onclick.svg');
+                placemark.balloon.open();
+            }
 
+            placemark.isClicked = !placemark.isClicked;
+            currentPlacemark = placemark;
+        });
 
         myMap.geoObjects.add(placemark);
     });
