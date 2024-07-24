@@ -72,7 +72,7 @@ function init() {
     };
 
     var currentPlacemark = null;
-
+    
     markersData.forEach(function(marker) {
         var BalloonContentLayout = createBalloonLayout(marker);
 
@@ -87,25 +87,28 @@ function init() {
             balloonOffset: [-100, 0]
         });
 
-        placemark.events.add('click', function (e) {
+        placemark.events.add('click', function () {
+        
             if (currentPlacemark && currentPlacemark !== placemark) {
                 currentPlacemark.options.set('iconImageHref', './pics/marker.svg');
                 currentPlacemark.balloon.close();
-                currentPlacemark.isClicked = false;
+                placemark.isClicked = false;
             }
         
-            if (placemark.isClicked) {
-                placemark.options.set('iconImageHref', './pics/marker.svg');
-                placemark.balloon.close();
-            } else {
+            if (!placemark.isClicked) {
                 placemark.options.set('iconImageHref', './pics/marker_onclick.svg');
                 placemark.balloon.open();
+                placemark.isClicked = false;
             }
-        
-            placemark.isClicked = !placemark.isClicked;
-            currentPlacemark = placemark;
-        });
 
+            if (placemark.isClicked) {
+                placemark.options.set('iconImageHref', './pics/marker.svg');
+            }
+            placemark.isClicked = true;
+            currentPlacemark = placemark;
+
+        });
+        
         myMap.geoObjects.add(placemark);
     });
 }
