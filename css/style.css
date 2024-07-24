@@ -1,0 +1,432 @@
+body {
+    background-color: white;
+    font-family: 'Manrope', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.ymaps-2-1-79-balloon__content {
+    padding: 0px !important;
+}
+
+.ymaps-2-1-79-balloon {
+    box-shadow: none !important;
+}
+
+.ymaps-2-1-79-balloon__layout {
+    width: 350px !important;
+    background: none !important;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.custom-balloon {
+    display: flex;
+    font-family: Arial, sans-serif;
+}
+.custom-balloon img {
+    width: 130px;
+    height: 130px;
+}
+.custom-balloon .content {
+    display: flex;
+    background-color: #FFFFFF;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 220px;
+    padding:0px;
+}
+
+.custom-balloon .about {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px 0px 0px 10px;
+    margin-top: 20px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: #959DA7;
+}
+
+.custom-balloon .header {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    color: #0F67CF;
+    padding: 0px 0px 0px 10px;
+    margin-top:-5px;
+    margin-bottom: 0px;
+    text-overflow: ellipsis;
+    white-space: nowrap;     
+    overflow: hidden; 
+    max-width: 190px;
+}
+
+.custom-balloon .rating__reviews {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    padding: 0px 0px 0px 10px;
+    margin-bottom:-5px;
+    gap: 10px;
+}
+
+.custom-balloon .reviews {
+    width: 55px;
+    height: 16px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: right;
+    color: #959DA7;
+}
+
+.custom-balloon .rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 16px;
+    background: #0D9333;
+    border-radius: 100px;
+    color: #FFFFFF;
+    cursor: default;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+}
+
+.custom-balloon .people {
+    width: 113px;
+    height: 16px;
+    padding: 0px 0px 0px 10px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #959DA7;
+    top:10px;
+    margin-top:10px;
+    margin-bottom: -5px;
+}
+
+.custom-balloon .price {
+    padding: 0px 0px 0px 10px;
+    top:10px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: #0B1827;
+    margin-bottom:10px;
+}
+
+.ymaps-2-1-79-balloon__close-button {
+    border-radius: 20px 20px 20px 20px;
+    background: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+.ymaps-2-1-79-balloon__close {
+    background: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important; 
+}
+
+.ymaps-2-1-79-balloon__tail {
+    display: none !important;
+}
+.ymaps-2-1-79-gototaxi__container, .ymaps-2-1-79-copyright__content-cell, .ymaps-2-1-79-copyright__logo-cell,.ymaps-2-1-79-gototech ,.ymaps-2-1-79-gotoymaps__container {
+    display: none !important;   
+}
+
+main {
+    margin: 0 auto;
+    display: flex;
+    height:auto;
+    flex-direction: row;
+    justify-content: center;
+    padding:30px;
+    background-color: #f6f6f6;
+    gap:30px;
+}
+
+#map {
+    display: flex;
+    width: 432px;
+    height: 845px;
+}
+
+section.container{
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+}
+
+.card_title p{
+    margin:0px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.card_title2 p{
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    color: #0B1827;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    width: 896px;
+    height: 258px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    z-index: 1;
+}
+.photo {
+    width: 290px;
+    height: 258px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.photo img {
+    width: auto;
+    border-radius: 20px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 16px 20px;
+    gap: 14px;
+    width: 606px;
+    height: 258px;
+    background: #FFFFFF;
+    border-radius: 0px 20px 20px 0px;
+}
+.info-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px;
+}
+.info-header .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+}
+.info-header .title h2 {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    color: #0F67CF;
+}
+.info-header .title h2 span {
+    color: red; /* Цвет выделенного слова */
+}
+.info-header .title p {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 18px;
+    color: #959DA7;
+}
+.info-header .reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0px;
+    gap: 12px;
+    width: 123px;
+    height: 19px;
+}
+.info-header .reviews p {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: right;
+    color: #959DA7;
+}
+
+.favorite_hotel {
+    position: absolute;
+    top: 5%;
+    left: 87%;
+    width: 17px;
+    height: 15px;
+}
+
+.favorite_hotel img:hover {
+    cursor: pointer;
+    content: url('../pics/favorite-hover.svg');
+}
+
+
+
+
+
+
+
+header {
+    width: 100%;
+    height: 79px;
+    background: #FFFFFF;
+    border-bottom: 1px solid #DEDEDE;
+}
+
+.head {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 40px;
+    max-width: auto;
+    height: 79px;
+}
+
+.left__part {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+}
+
+.logo img {
+    width: 158px;
+    height: 23px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+}
+
+.button {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #959DA7;
+    text-decoration: none;
+}
+
+.button.active {
+    color: #051F3E;
+}
+
+.button:hover {
+    color: #073266;
+    cursor: pointer;
+}
+
+.right__part {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+}
+
+.favorite {
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+
+.favorite img:hover {
+    cursor: pointer;
+    content: url('../pics/favorite-hover.svg');
+}
+
+.badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    background: #E3353E;
+    border-radius: 50%;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+}
+
+.account {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+.account img {
+    width: 20px;
+    height: 20px;
+}
+
+.account a:hover {
+    color: #073266;
+    cursor:pointer;
+}
+
+.account a {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: #0F67CF;
+    margin: 0;
+    text-decoration: none;
+}
+
+footer {
+    width:100%;
+    height: 103px;
+    background-color: #f6f6f6;
+}
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    gap: 64px;
+}
