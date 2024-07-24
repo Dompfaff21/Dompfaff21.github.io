@@ -91,9 +91,9 @@ function init() {
             if (currentPlacemark && currentPlacemark !== placemark) {
                 currentPlacemark.options.set('iconImageHref', './pics/marker.svg');
                 currentPlacemark.balloon.close();
-                currentPlacemark.isClicked = false; // Reset the previous placemark's click state
+                currentPlacemark.isClicked = false;
             }
-
+        
             if (placemark.isClicked) {
                 placemark.options.set('iconImageHref', './pics/marker.svg');
                 placemark.balloon.close();
@@ -101,7 +101,7 @@ function init() {
                 placemark.options.set('iconImageHref', './pics/marker_onclick.svg');
                 placemark.balloon.open();
             }
-
+        
             placemark.isClicked = !placemark.isClicked;
             currentPlacemark = placemark;
         });
