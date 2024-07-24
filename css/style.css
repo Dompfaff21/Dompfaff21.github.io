@@ -173,7 +173,7 @@ main {
 section.container{
     display: flex;
     flex-direction: column;
-    gap:40px;
+    gap:30px;
 }
 
 .card_title p{
@@ -213,7 +213,7 @@ section.container{
     position: relative;
 }
 
-.photo img {
+.photo.hotel img {
     width: auto;
     border-radius: 20px;
 }
@@ -229,21 +229,414 @@ section.container{
     background: #FFFFFF;
     border-radius: 0px 20px 20px 0px;
 }
+
 .info-header {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+    border-bottom: 1px solid rgba(11, 24, 39, 0.2);
+    width: 566px;
+}
+
+
+.row3 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
     padding: 0px;
+    gap: 270px;
+    margin-bottom:10px;
 }
-.info-header .title {
+.column3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0px;
+    gap: 8px;
+}
+.column2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+}
+.adress {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    color: #959DA7;
+    margin:0px;
+}
+.metro {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+    align-content: center;
+    margin-top:0px;
+}
+
+.metro_photo {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+    background: #E3EDF9;
+    border-radius: 100px;
+}
+.metro_photo img {
+    width: 12px;
+    height: 8px;
+    margin-bottom:2px;
+}
+
+.about-room {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 4px;
+}
+
+.bed-name {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 130%;
+    color: #0B1827;
+    margin:0px;
+}
+
+.bed {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 130%;
+    color: #0B1827;
+    margin:0px;
+}
+
+.station {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    color: #0B1827;
+}
+
+.distance {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 4px;
+}
+.icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 12px;
+}
+
+.icons img{
+    width: 24px;
+    height: 24px;
+}
+
+.special {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 550px;
+    width: 896px;
+    height: 62px;
+    background: #E1FFEA;
+    border-radius: 0px 0px 20px 20px;
+    margin-top:-50px;
+}
+
+.person {
+    width: 225px;
+    height: 18px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 18px;
+    color: #0D9333;
+    margin-left: 20px;
+    margin-top:20px;
+    margin-bottom:0px;
+}
+
+.time-clock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right:20px;
+    gap:4px;
+    margin-top:20px;
+    margin-bottom:0px;
+}
+.time-clock img {
+    width: 18px;
+    height: 18px;
+}
+.time-clock p{
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 18px;  
+    color: #0D9333;
+}
+
+.distance p{
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #959DA7;
+    margin:0px;
+}
+.advantages{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 12px;
+}
+.ot_centra {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 18px;
+    color: #959DA7;
+    margin:0px;
+}
+
+.free {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    color: #0D9333;
+    width: 122px;
+    height: 40px;
+}
+
+.breakfast {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    color: #0D9333;
+    width: 106px;
+    height: 40px;
+}
+
+.payment {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    color: #0B1827;
+    width: 103px;
+    height: 40px;
+}
+
+.row4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 90px;
+}
+.column4 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 12px;
+    margin: 0 auto;
+}
+.offer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0px;
+    gap: 8px;
+    margin: 0 auto;
+}
+
+.time {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #959DA7;
+    margin:0px;
+    display:flex;
+    align-items: flex-end;
+}
+
+.price {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: baseline;
+    padding: 0px;
+    gap: 8px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    color: #0B1827;
+    margin:0px;
+}
+
+.details_button {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 10px;
+    background: #E3353E;
+    border-radius: 20px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.show_on_map {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 18px;
+    color: #0F67CF;
+    margin:0px;
+    cursor: pointer;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap:205px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+.row2 {
+    display: flex;
+    flex-direction: row;
+    gap:6px;
+}
+.row2 img {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    padding: 0px;
+    align-items: center;
+    padding: 1px 1px 2px;
+    isolation: isolate;
+    width: 26px;
+    height: 26px;
 }
-.info-header .title h2 {
+.ratingandreviews {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+    width: 123px;
+    height: 19px;
+    margin-top:20px;
+}
+
+.grades {
+    width: 140px;
+    height: 19px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: #959DA7;
+}
+.rate{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 7px;
+    gap: 10px;
+    width: 35px;
+    height: 19px;
+    background: #0D9333;
+    border-radius: 100px;
+}
+
+.value {
+    width: 21px;
+    height: 19px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.stars {
+    width: 62px;
+    height: 18px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    margin:20px 0px 0px 0px;
+    line-height: 18px;
+    color: #959DA7;
+}
+
+.name {
+    width: 204px;
+    height: 27px;
+    margin:0px;
     font-family: 'Manrope';
     font-style: normal;
     font-weight: 700;
@@ -251,34 +644,35 @@ section.container{
     line-height: 27px;
     color: #0F67CF;
 }
-.info-header .title h2 span {
-    color: red; /* Цвет выделенного слова */
-}
-.info-header .title p {
-    font-family: 'Manrope';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 13px;
-    line-height: 18px;
-    color: #959DA7;
-}
-.info-header .reviews {
+
+.best_prise{
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    padding: 0px;
-    gap: 12px;
-    width: 123px;
-    height: 19px;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 10px;
+    gap: 6px;
+    position: absolute;
+    height:30px;
+    left: 10px;
+    top: 10px;
+    background: rgba(11, 24, 39, 0.3);
+    border-radius: 20px;
 }
-.info-header .reviews p {
+
+.best_prise img{
+    width: 16px;
+    height: 16px;
+}
+
+.best_prise p{
     font-family: 'Manrope';
     font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 19px;
-    text-align: right;
-    color: #959DA7;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #FFFFFF;
+    width: 117px;
+    height: 16px;
 }
 
 .favorite_hotel {
@@ -294,7 +688,14 @@ section.container{
     content: url('../pics/favorite-hover.svg');
 }
 
-
+.favorite_hotel_active {
+    position: absolute;
+    cursor: pointer;
+    top: 5%;
+    left: 87%;
+    width: 17px;
+    height: 15px;
+}
 
 
 

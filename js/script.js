@@ -2,7 +2,7 @@ ymaps.ready(init);
 
 function init() {
     var myMap = new ymaps.Map("map", {
-        center: [55.751640, 37.640860],
+        center: [55.756810, 37.642994],
         zoom: 14,
         controls: []
     });
@@ -16,7 +16,8 @@ function init() {
             rating: '4.9',
             image: './pics/marker_hotel.svg',
             people: 'За 5 ночей и 2 гостя',
-            about: 'Гостиница 3*'
+            about: 'Гостиница 3*',
+            openByDefault: true
         },
         {
             coords: [55.752859, 37.643474],
@@ -86,29 +87,32 @@ function init() {
             balloonPanelMaxMapArea: 0,
             balloonOffset: [-100, 0]
         });
-
-        placemark.events.add('click', function () {
         
+        myMap.geoObjects.add(placemark);
+
+        if (marker.openByDefault) {
+            placemark.balloon.open();
+            currentPlacemark = placemark;
+            placemark.isClicked = true;
+            placemark.options.set('iconImageHref', './pics/marker_onclick.svg');
+        }
+
+        placemark.events.add('balloonopen', function () {
             if (currentPlacemark && currentPlacemark !== placemark) {
                 currentPlacemark.options.set('iconImageHref', './pics/marker.svg');
                 currentPlacemark.balloon.close();
-                placemark.isClicked = false;
-            }
-        
-            if (!placemark.isClicked) {
-                placemark.options.set('iconImageHref', './pics/marker_onclick.svg');
-                placemark.balloon.open();
-                placemark.isClicked = false;
+                currentPlacemark.isClicked = false;
             }
 
-            if (placemark.isClicked) {
-                placemark.options.set('iconImageHref', './pics/marker.svg');
-            }
+            placemark.options.set('iconImageHref', './pics/marker_onclick.svg');
             placemark.isClicked = true;
             currentPlacemark = placemark;
-
         });
-        
-        myMap.geoObjects.add(placemark);
+
+        placemark.events.add('balloonclose', function () {
+            placemark.options.set('iconImageHref', './pics/marker.svg');
+            placemark.isClicked = false;
+        });
+
     });
 }
