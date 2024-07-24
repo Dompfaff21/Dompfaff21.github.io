@@ -192,6 +192,8 @@ section.container{
     font-size: 20px;
     line-height: 27px;
     color: #0B1827;
+    margin-bottom:0px;
+    margin-top:0px;
 }
 
 .card {
@@ -536,6 +538,11 @@ section.container{
     line-height: 19px;
     text-align: center;
     color: #FFFFFF;
+    cursor: pointer;
+}
+
+.details_button:hover {
+    background: #D3202A;
 }
 
 .show_on_map {
