@@ -303,26 +303,36 @@ document.addEventListener('DOMContentLoaded', function () {
 
 const pullout = document.querySelector('.pullout');
 
-// Функция для открытия и закрытия панели
+let isPanelOpen = false;
+
 function togglePullout() {
-    pullout.classList.toggle('open');
+    if (isPanelOpen) {
+        pullout.classList.remove('open');
+    } else {
+        pullout.classList.add('open');
+    }
+    isPanelOpen = !isPanelOpen;
 }
 
-// Обработка свайпа
 let touchStartY = 0;
 let touchEndY = 0;
 
-document.addEventListener('touchstart', (event) => {
+pullout.addEventListener('touchstart', (event) => {
     touchStartY = event.touches[0].clientY;
 });
 
-document.addEventListener('touchend', (event) => {
+pullout.addEventListener('touchend', (event) => {
     touchEndY = event.changedTouches[0].clientY;
 
     if (touchEndY < touchStartY) {
-        togglePullout();
+        if (!isPanelOpen) {
+            togglePullout();
+        }
     } else if (touchEndY > touchStartY) {
-        // Закрытие панели при свайпе вниз
-        pullout.classList.remove('open');
+        if (isPanelOpen) {
+            togglePullout();
+        }
     }
 });
+
+
