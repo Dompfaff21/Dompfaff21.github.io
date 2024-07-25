@@ -1094,21 +1094,19 @@ footer {
         z-index: 1000;
         padding: 20px;
         border-radius: 20px 20px 0px 0px;
-        overflow-y: auto;
         flex-direction: column;
     }
 
     .line {
         display: flex;
-        align-items: center;
         justify-content: center;
     }
 
     .pullout.open {
         transform: translateY(0);
+        overflow-y: auto;
     }
     
-
     #map {
         position: relative;
         width: 100%;
@@ -1116,7 +1114,7 @@ footer {
         overflow: hidden;
     }
     .card_title p{
-        margin-top:20px;
+        margin-top:15px;
         font-family: 'Manrope';
         font-style: normal;
         font-weight: 700;
