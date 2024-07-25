@@ -1025,8 +1025,6 @@ footer {
         border-bottom: 1px solid #DEDEDE;
         border-radius: 0px 0px 20px 20px;
         width:100%;
-        z-index: 1000;
-        position: fixed;
     }
 
     .left__part {
