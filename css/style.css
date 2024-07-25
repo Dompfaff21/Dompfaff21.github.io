@@ -232,13 +232,6 @@ section.container{
     position: relative;
     margin-right: 20px;
 }
-
-.photo.hotel img {
-    width: auto;
-    border-radius: 20px;
-}
-
-
   .slider_dots {
     position: absolute;
     display: flex;
@@ -1025,6 +1018,8 @@ footer {
         border-bottom: 1px solid #DEDEDE;
         border-radius: 0px 0px 20px 20px;
         width:100%;
+        position: fixed;
+        z-index: 3;
     }
 
     .left__part {
@@ -1090,7 +1085,6 @@ footer {
         transform: translateY(80%);
         transition: transform 0.3s ease;
         z-index: 1000;
-        padding: 20px;
         border-radius: 20px 20px 0px 0px;
         flex-direction: column;
     }
@@ -1098,6 +1092,7 @@ footer {
     .line {
         display: flex;
         justify-content: center;
+        padding:20px;
     }
 
     .pullout.open {
@@ -1112,12 +1107,12 @@ footer {
         overflow: hidden;
     }
     .card_title p{
-        margin-top:15px;
+        margin-top:5px;
         font-family: 'Manrope';
         font-style: normal;
         font-weight: 700;
         font-size: 16px;
         line-height: 22px;
+        margin-left: 20px;
     }
-
 }

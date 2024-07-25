@@ -302,6 +302,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 const pullout = document.querySelector('.pullout');
+const line = document.querySelector('.line');
 
 let isPanelOpen = false;
 
@@ -317,11 +318,11 @@ function togglePullout() {
 let touchStartY = 0;
 let touchEndY = 0;
 
-pullout.addEventListener('touchstart', (event) => {
+line.addEventListener('touchstart', (event) => {
     touchStartY = event.touches[0].clientY;
 });
 
-pullout.addEventListener('touchend', (event) => {
+line.addEventListener('touchend', (event) => {
     touchEndY = event.changedTouches[0].clientY;
 
     if (touchEndY < touchStartY) {
@@ -334,5 +335,6 @@ pullout.addEventListener('touchend', (event) => {
         }
     }
 });
+
 
 
