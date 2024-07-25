@@ -300,3 +300,29 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var timerInterval = setInterval(updateTime, 60000);
 });
+
+const pullout = document.querySelector('.pullout');
+
+// Функция для открытия и закрытия панели
+function togglePullout() {
+    pullout.classList.toggle('open');
+}
+
+// Обработка свайпа
+let touchStartY = 0;
+let touchEndY = 0;
+
+document.addEventListener('touchstart', (event) => {
+    touchStartY = event.touches[0].clientY;
+});
+
+document.addEventListener('touchend', (event) => {
+    touchEndY = event.changedTouches[0].clientY;
+
+    if (touchEndY < touchStartY) {
+        togglePullout();
+    } else if (touchEndY > touchStartY) {
+        // Закрытие панели при свайпе вниз
+        pullout.classList.remove('open');
+    }
+});

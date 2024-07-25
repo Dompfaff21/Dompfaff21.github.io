@@ -1079,14 +1079,35 @@ footer {
     }
 
     .pullout {
-        width: 100%;
-        position:absolute;
-        top:40px;
-        background: #F6F6F6;
-        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.07);
-        border-radius: 20px;
-        transform: translateY(100%);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 300px; /* Высота панели */
+        background-color: #ffffff; /* Белый фон */
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Тень для панели */
+        transform: translateY(80%); /* Панель будет частично видна снизу */
         transition: transform 0.3s ease;
+        overflow-y: auto; /* Прокрутка при необходимости */
+        z-index: 1000; /* Панель будет поверх карты */
+        padding: 20px; /* Отступы внутри панели */
+    }
+    
+    /* Панель открыта */
+    .pullout.open {
+        transform: translateY(0);
+    }
+    
+    /* Кнопка открытия панели (опционально) */
+    .open-btn {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        background: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
     }
     #map {
         display: flex;
